@@ -9,7 +9,6 @@
 
 - [Overview](#-overview)
 - [Tools Used](#-tools-used)
-- [Tool Used](#-tool-used)
 - [Dataset](#-dataset)
 - [Database](#-database)
 - [Data Processing](#-data-processing)
@@ -30,7 +29,6 @@ This project is a hands-on SQL analysis of a music and mental health survey data
 
 <br>
 
-# Tool Used
 # 🛠️ Tools Used
 
 
