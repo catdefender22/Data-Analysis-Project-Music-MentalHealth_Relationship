@@ -18,9 +18,10 @@
 ---
 
 ## 🔍 Overview
-This project is a hands-on SQL analysis of the **Olist Brazilian E-commerce** dataset, a real marketplace operating in Brazil with multiple sellers and thousands of customers. The idea is to treat this like a real data analyst case: dive into the raw data, write exploratory and KPI-driven queries, and surface insights that could actually help a business.
+This project is a hands-on SQL analysis of a music and mental health survey dataset. The data includes responses from hundreds of people about how they listen to music, what genres they like, how many hours they listen each day, whether they compose or play instruments, alongside self-reported levels of anxiety, depression, insomnia, and OCD.
 
-Everything is documented as a step-by-step journal. I walk through what questions I’m trying to answer, what SQL I’m writing to get there, and what I’m learning along the way.
+
+
 
 ---
 
@@ -28,39 +29,32 @@ Everything is documented as a step-by-step journal. I walk through what question
 
 - **SQL:** For data cleaning, transformation, and analytical querying  
 - **SMSS:** Used as the database engine to store and manage the relational dataset   
-- **Tableau:** For visualization of results and reporting
+  
 
 ---
 
 
 ## 📦 Dataset
 
-The dataset used in this project comes from **Olist**, a real Brazilian e-commerce marketplace that connects multiple sellers to customers across Brazil. It contains detailed historical data on thousands of orders placed between 2016 and 2018. The dataset is publicly available on [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) and is known for its completeness and authenticity.
 
-It includes information such as:
+  The dataset used in this project comes from the <strong> Music &amp; Mental Health Survey</strong>, a public dataset available on  <a href="https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results?resource=download" target="_blank">Kaggle</a>. It includes responses from individuals around the world about their music listening habits, such as favorite genres, streaming platforms, and hours spent listening alongside self-reported measures of mental health like anxiety, depression, insomnia, and OCD.
 
-- Order and delivery timestamps  
-- Customer and seller location data  
-- Product details and categories  
-- Payment methods and amounts  
-- Customer reviews and ratings  
 
-This rich structure allows for in-depth analysis of customer behavior, product performance, logistics, and satisfaction trends.
+
+
 
 ---
 
 ## 🗄️ Database
 
-To manage and explore the dataset effectively, a **relational SQL database** has been created. PostgreSQL is used to store and query the data. The schema has been designed to reflect the natural relationships between orders, customers, sellers, and products.
+To manage and explore the dataset effectively, a relational SQL database has been created using Microsoft SQL Server. The schema is designed to reflect the natural structure of the survey, organizing responses into themes like listening habits, genre preferences, and mental health indicators.
 
 Key relationships include:
+– Each respondent providing a unique set of answers
+– Music preferences connected to self-reported mental health scores
+– Streaming behavior linked to demographics like age and daily listening time
+– Perceived effects of music categorized alongside listening context and genre
 
-- Customers placing multiple orders  
-- Each order containing one or more products  
-- Sellers fulfilling different items across various orders  
-- Reviews linked to each order for quality assessment  
-
-This structure supports complex queries and enables robust data slicing for KPIs, trends, and insight generation.
 
 ---
 
