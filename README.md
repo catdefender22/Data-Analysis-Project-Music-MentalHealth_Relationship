@@ -11,7 +11,6 @@
 - [Tools Used](#-tools-used)
 - [Dataset](#-dataset)
 - [Database](#-database)
-- [Prova](#prova)
 - [Data Processing](#-data-processing)
 - [Project Includes](#-project-includes)
 - [Conclusion](#-conclusion)
@@ -21,34 +20,35 @@
 ---
 
 
-
+<br>
 # 🔍 Overview
+<br>
 This project is a hands-on SQL analysis of a music and mental health survey dataset. The data includes responses from hundreds of people about how they listen to music, what genres they like, how many hours they listen each day, whether they compose or play instruments, alongside self-reported levels of anxiety, depression, insomnia, and OCD.
 
 
 
 
 ---
-
+<br>
 # 🛠️ Tools Used
-
+<br>
 - **SQL:** For data cleaning, transformation, and analytical querying  
 - **SMSS:** Used as the database engine to store and manage the relational dataset   
   
 
 ---
 
-
+<br>
 # 📦 Dataset
-
+<br>
 
   The dataset used in this project comes from the <strong> Music &amp; Mental Health Survey</strong>, a public dataset available on  <a href="https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results?resource=download" target="_blank">Kaggle</a>. It includes responses from individuals around the world about their music listening habits, such as favorite genres, streaming platforms, and hours spent listening alongside self-reported measures of mental health like anxiety, depression, insomnia, and OCD.
 
 
 ---
-
+<br>
 # 🗄️ Database
-
+<br>
 To manage and explore the dataset effectively, a relational SQL database has been created using Microsoft SQL Server. The schema is designed to reflect the natural structure of the survey, organizing responses into themes like listening habits, genre preferences, and mental health indicators.
 
 Key relationships include:
@@ -60,9 +60,9 @@ Key relationships include:
 
 
 ---
-
+<br>
 # 🧹 Data Processing
-
+<br>
 The raw CSV file from the Kaggle dataset required some initial cleaning and preparation. 
 
 <br><br>
@@ -115,11 +115,12 @@ Let's double check if we truly dropped the column:
   
 
 ---
-
+<br>
 
 
 # 📈 Project Includes
 
+<br>
 - **Overview:** This analysis focuses on extracting insights around listening time, platform usage, mood effects, and mental health self-assessments. It’s not just about who listens to what but also it’s about how that might relate to how they feel.
  <br>
 <br>
@@ -159,7 +160,6 @@ Are certain genres more commonly associated with mood improvement?
 From this result we can see that some genres are better performing than others, the best performing are  Gospel and LoFi, while the worst is the videogame music category. (not considering Latin, only 2 respondents)
 <br>
 
-## Prova
 
 <br>
 Which streaming service had the most improving users and which one the most worsening?:
@@ -167,10 +167,12 @@ Which streaming service had the most improving users and which one the most wors
 <br>
 The best streaming service with the highest improving users percentage seems to be Pandora, followed by Spotify.
 <br>
-<br>
 
+
+<br>
 # Conclusion
 <br>
+
 While it’s widely accepted that music can have a positive impact on mental health, it’s much harder to pin down exactly how that works or what kind of music helps most. People's preferences, listening habits, and emotional responses vary so much that drawing clear lines between genres and mental health outcomes is complicated. This project doesn’t try to prove anything definitive, but instead looks at what the data might suggest where patterns start to emerge, and where things remain personal and subjective.
 
 
