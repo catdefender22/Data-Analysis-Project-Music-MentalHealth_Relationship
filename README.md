@@ -120,6 +120,7 @@ Let's double check if we truly dropped the column:
 
 # 📈 Project Includes
 
+
 <br>
 - **Overview:** This analysis focuses on extracting insights around listening time, platform usage, mood effects, and mental health self-assessments. It’s not just about who listens to what but also it’s about how that might relate to how they feel.
  <br>
@@ -170,7 +171,11 @@ The best streaming service with the highest improving users percentage seems to 
 
 
 <br>
+
+
 # Conclusion
+
+
 <br>
 
 While it’s widely accepted that music can have a positive impact on mental health, it’s much harder to pin down exactly how that works or what kind of music helps most. People's preferences, listening habits, and emotional responses vary so much that drawing clear lines between genres and mental health outcomes is complicated. This project doesn’t try to prove anything definitive, but instead looks at what the data might suggest where patterns start to emerge, and where things remain personal and subjective.
