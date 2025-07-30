@@ -1,4 +1,4 @@
-# Data Analysis Project 1 - Olist Ecommerce
+# Data Analysis Project 2 - How music influences our Mental health
 
 
 ![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
@@ -40,9 +40,6 @@ This project is a hands-on SQL analysis of a music and mental health survey data
   The dataset used in this project comes from the <strong> Music &amp; Mental Health Survey</strong>, a public dataset available on  <a href="https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results?resource=download" target="_blank">Kaggle</a>. It includes responses from individuals around the world about their music listening habits, such as favorite genres, streaming platforms, and hours spent listening alongside self-reported measures of mental health like anxiety, depression, insomnia, and OCD.
 
 
-
-
-
 ---
 
 ## 🗄️ Database
@@ -57,7 +54,6 @@ Key relationships include:
 
 
 ---
-
 
 
 
