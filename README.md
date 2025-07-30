@@ -12,7 +12,6 @@
 - [Dataset](#-dataset)
 - [Database](#-database)
 - [Prova](#prova)
-
 - [Data Processing](#-data-processing)
 - [Project Includes](#-project-includes)
 - [Conclusion](#-conclusion)
