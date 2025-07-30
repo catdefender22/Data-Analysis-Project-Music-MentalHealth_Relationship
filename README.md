@@ -8,12 +8,12 @@
 ## 📚 Table of Contents
 
 - [Overview](#-overview)
-- [Tools Used](#tools-used)
-- [Dataset](#dataset)
-- [Database](#database)
-- [Data Processing](#data-processing)
-- [Project Includes](#project-includes)
-- [Conclusions](#conclusions)
+- [Tools Used](#-tools-used)
+- [Dataset](#-dataset)
+- [Database](#-database)
+- [Data Processing](#-data-processing)
+- [Project Includes](#-project-includes)
+- [Conclusions](#-conclusions)
 
 
 
