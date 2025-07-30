@@ -8,7 +8,7 @@
 ## 📚 Table of Contents
 
 - [Overview](#-overview)
-- [Tools Used](#-tools Used)
+- [Tools Used](#-tools-Used)
 - [Dataset](#-dataset)
 - [Database](#-database)
 - [Data Processing](#-data-processing)
