@@ -29,7 +29,7 @@ This project is a hands-on SQL analysis of a music and mental health survey data
 
 ---
 
-## 🛠️ Tools
+## Tools Used
 
 - **SQL:** For data cleaning, transformation, and analytical querying  
 - **SMSS:** Used as the database engine to store and manage the relational dataset   
