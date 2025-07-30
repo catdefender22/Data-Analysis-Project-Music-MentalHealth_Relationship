@@ -139,23 +139,25 @@ Much better. From this result it seems that music is actually worsening our ment
 Self report on usefulness of music: <br>
 <img width="668" height="439" alt="image" src="https://github.com/user-attachments/assets/c8429bd1-e6c9-4a1f-a17c-b3423c23ab29" />
 From a self reporting perspecting it seems that music is very helpful. 
+<br>
 
-
-<br><br>
----
-<br><br>
-
-## 👁️‍🗨️ Visualization
+Are certain genres more commonly associated with mood improvement?
+<img width="753" height="750" alt="image" src="https://github.com/user-attachments/assets/461e9cd1-1242-4f4c-9b98-ad9384e1827e" />
+From this result we can see that some genres are better performing than others, the best performing are  Gospel and LoFi, while the worst is the videogame music category. (not considering Latin, only 2 respondents)
+<br>
 
 <br>
-While the foundational analysis and data preparation were done in SQL, the remaining exploration particularly around customer behavior, delivery patterns, and geographical trends will be completed in Tableau. This decision was made to leverage Tableau's interactive and visual capabilities, making the insights easier to interpret and communicate to both technical and non-technical stakeholders. The dashboard will consolidate key KPIs and allow users to explore the data through filters, maps, and dynamic charts.
-
-Here the result:<br> <br>
-<img width="1149" height="774" alt="olist cx analysis" src="https://github.com/user-attachments/assets/db901459-dcd5-4148-94ac-55eff2dd18da" />
+Which streaming service had the most improving users and which one the most worsening?:
+<img width="731" height="539" alt="image" src="https://github.com/user-attachments/assets/5bb4f7eb-e175-4c86-8433-83ffbec095b5" />
+The best streaming service with the highest improving users percentage seems to be Pandora, followed by Spotify.
 <br><br>
 
-<p> Click <a href="https://public.tableau.com/views/brasilianecommerceanalysis/olistcxanalysis?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer">here</a> for the interactive version of the dashboard.</p>
 
+## Conclusions
+<br>
+While it’s widely accepted that music can have a positive impact on mental health, it’s much harder to pin down exactly how that works or what kind of music helps most. People's preferences, listening habits, and emotional responses vary so much that drawing clear lines between genres and mental health outcomes is complicated. This project doesn’t try to prove anything definitive, but instead looks at what the data might suggest where patterns start to emerge, and where things remain personal and subjective.
+
+
+<br><br>
 ---
-
-
+<br><br>
