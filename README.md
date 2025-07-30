@@ -121,41 +121,50 @@ Let's double check if we truly dropped the column:
 
 - **Overview:** This analysis focuses on extracting insights around listening time, platform usage, mood effects, and mental health self-assessments. It’s not just about who listens to what but also it’s about how that might relate to how they feel.
  <br>
-
+<br>
 Are certain genres more common among people reporting anxiety?:<br>
 <img width="502" height="618" alt="image" src="https://github.com/user-attachments/assets/a96d265a-53da-47b0-a61b-a29ff39d0b62" />
 
 <br>
-
-Are certain genres more common among people reporting depression?:<br>
+<br>
+Are certain genres more common among people reporting depression?:
+<br>
 <img width="517" height="599" alt="image" src="https://github.com/user-attachments/assets/e939f73d-3d44-454b-9650-114a818f4769" />
 <br>
-
+<br>
 Do people who listen more hours per day report different mental health patterns?:<br>
+
 <img width="732" height="817" alt="image" src="https://github.com/user-attachments/assets/1084425b-c3c6-4438-8645-4410ac0736ee" />
 <br>
+<br>
 Not very clear, let's group using bin:
+<br>
 <img width="972" height="820" alt="image" src="https://github.com/user-attachments/assets/22aa0ca3-ff7d-4768-94c7-f6626cfb7be5" />
+<br>
 Much better. From this result it seems that music is actually worsening our mental health, but it's more plausible that people dealing with more stress or emotional difficulty use music as a coping tool, resulting in longer listening times rather than music causing distress.
 
-
 <br>
-Self report on usefulness of music: <br>
+<br>
+Self report on usefulness of music:
+<br>
 <img width="668" height="439" alt="image" src="https://github.com/user-attachments/assets/c8429bd1-e6c9-4a1f-a17c-b3423c23ab29" />
+<br>
 From a self reporting perspecting it seems that music is very helpful. 
 <br>
-
+<br>
 Are certain genres more commonly associated with mood improvement?
 <img width="753" height="750" alt="image" src="https://github.com/user-attachments/assets/461e9cd1-1242-4f4c-9b98-ad9384e1827e" />
+<br>
 From this result we can see that some genres are better performing than others, the best performing are  Gospel and LoFi, while the worst is the videogame music category. (not considering Latin, only 2 respondents)
 <br>
 
 <br>
 Which streaming service had the most improving users and which one the most worsening?:
 <img width="731" height="539" alt="image" src="https://github.com/user-attachments/assets/5bb4f7eb-e175-4c86-8433-83ffbec095b5" />
+<br>
 The best streaming service with the highest improving users percentage seems to be Pandora, followed by Spotify.
-<br><br>
-
+<br>
+<br>
 
 # Conclusion
 <br>
