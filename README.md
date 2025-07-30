@@ -7,19 +7,17 @@
 
 ## 📚 Table of Contents
 - [Overview](#-overview)
+- [Tools Used](#-tools-used)
 - [Dataset](#-dataset)
 - [Database](#-database)
 - [Data Processing](#-data-processing)
 - [Project Includes](#-project-includes)
-- [Tools Used](#-tools-used)
 - [Conclusion](#-conclusion)
-- [Contact Me](#-contact-me)
+
 
 ---
 
-## 🔍 Overview
 
----
 
 ## 🔍 Overview
 This project is a hands-on SQL analysis of a music and mental health survey dataset. The data includes responses from hundreds of people about how they listen to music, what genres they like, how many hours they listen each day, whether they compose or play instruments, alongside self-reported levels of anxiety, depression, insomnia, and OCD.
@@ -157,7 +155,7 @@ The best streaming service with the highest improving users percentage seems to 
 <br><br>
 
 
-## Conclusions
+## Conclusion
 <br>
 While it’s widely accepted that music can have a positive impact on mental health, it’s much harder to pin down exactly how that works or what kind of music helps most. People's preferences, listening habits, and emotional responses vary so much that drawing clear lines between genres and mental health outcomes is complicated. This project doesn’t try to prove anything definitive, but instead looks at what the data might suggest where patterns start to emerge, and where things remain personal and subjective.
 
