@@ -8,7 +8,7 @@
 ## 📚 Table of Contents
 
 - [Overview](#-overview)
-- [Tools Used](#-tools-used)
+- [Tools Used](#-tools)
 - [Dataset](#-dataset)
 - [Database](#-database)
 - [Data Processing](#-data-processing)
@@ -21,7 +21,7 @@
 
 
 
-# 🔍 Overview
+## 🔍 Overview
 This project is a hands-on SQL analysis of a music and mental health survey dataset. The data includes responses from hundreds of people about how they listen to music, what genres they like, how many hours they listen each day, whether they compose or play instruments, alongside self-reported levels of anxiety, depression, insomnia, and OCD.
 
 
@@ -29,7 +29,7 @@ This project is a hands-on SQL analysis of a music and mental health survey data
 
 ---
 
-# 🛠️ Tools Used
+## 🛠️ Tools
 
 - **SQL:** For data cleaning, transformation, and analytical querying  
 - **SMSS:** Used as the database engine to store and manage the relational dataset   
