@@ -53,98 +53,59 @@ Key relationships include:
 – Perceived effects of music categorized alongside listening context and genre
 
 
----
-
-
-
- ## Schema structure
-
-
-
-
-<img width="2486" height="1496" alt="schema" src="https://github.com/user-attachments/assets/4c025686-043d-4f7f-b99d-4f5a9a02d3b8" />
-
-
 
 ---
 
 ## 🧹 Data Processing
 
-The raw CSV files from the Kaggle dataset required some initial cleaning and preparation. SQL scripts were written to:
+The raw CSV file from the Kaggle dataset required some initial cleaning and preparation. 
 
-
-
+<br><br>
 
 - Import and load the data into SQL Server Management Studio
 
-  The raw dataset files (CSV format) were uploaded directly into SQL Server Management Studio (SSMS) using the "Import Flat File..." wizard. This allowed me to create all tables easily with their respective columns and data types, without (mostly) changing the type.
+  The  dataset file (CSV format) was uploaded directly into SQL Server Management Studio (SSMS) using the "Import Flat File..." wizard. This allowed me to create the table easily with its respective columns and data types, without changing the type.
 
 
 
-<img width="825" height="750" alt="image" src="https://github.com/user-attachments/assets/c8dd8fd6-91d2-4500-ac07-cb98c58cc20e" />
-
-<img width="826" height="753" alt="image" src="https://github.com/user-attachments/assets/2415d635-8f7e-451b-9809-b7b79d18999f" />
+<img width="830" height="755" alt="image" src="https://github.com/user-attachments/assets/ea3ba7b3-3de0-41d0-aa6d-c5620fa5db1d" />
 
 
-
+<br><br>
   
 - Handle missing or null values
 
-I’m checking for blank and NULL values across all key tables in the Olist dataset. This helps identify any data quality issues that could affect the accuracy of the analysis. For each table, I count how many rows are missing critical fields like IDs, timestamps, payment values, or location data.
+I’m taking a look at each key table to check for any blank or NULL values. This is a quick way to spot potential data quality issues that might impact the accuracy of the analysis. For every table, I’m counting how many rows are missing important fields with the following code:
 
-Example:
 
-<pre> 
- 
- SELECT 
-    COUNT(*) AS total_rows,
-    SUM(CASE WHEN order_id IS NULL THEN 1 ELSE 0 END) AS missing_order_id,
-    SUM(CASE WHEN order_item_id IS NULL THEN 1 ELSE 0 END) AS missing_order_item_id,
-    SUM(CASE WHEN product_id IS NULL THEN 1 ELSE 0 END) AS missing_product_id,
-    SUM(CASE WHEN seller_id IS NULL THEN 1 ELSE 0 END) AS missing_seller_id,
-    SUM(CASE WHEN shipping_limit_date IS NULL THEN 1 ELSE 0 END) AS missing_shipping_limit_date,
-    SUM(CASE WHEN price IS NULL THEN 1 ELSE 0 END) AS missing_price,
-    SUM(CASE WHEN freight_value IS NULL THEN 1 ELSE 0 END) AS missing_freight_value
-FROM olist_order_items_dataset;
- 
-  </pre>
+<img width="937" height="398" alt="image" src="https://github.com/user-attachments/assets/6dbd8837-73a0-4e45-9134-34a6e6bce9ca" />
+<br><br>
+Let's have a look at the result:
 
-I then run the equivalent code for each table, confirming the number of rows containing NULL values and excluding them.
+<img width="1310" height="197" alt="image" src="https://github.com/user-attachments/assets/7c4d1f94-e26a-4f2c-9ee9-2ec5db74fb81" />
 
+Luckily, the dataset is decent, there aren’t many NULL values, so we can move forward without   cleaning.
+<br><br>
   
-- Normalize formats (e.g., dates)
+- Simplify formats (e.g., dates)
 
-Here the scope is to check the formats of key fields such as dates or costs. If in a wrong format change that.  
+Here the scope is to change the formats of the field date, we don't really need to know the minute and hour. Let's change it with the CAST function:
 
-Example:
-
-<img width="1381" height="133" alt="image" src="https://github.com/user-attachments/assets/f9358cc4-165b-4eb8-baa0-cd76b8bb93b4" />
+<img width="501" height="690" alt="image" src="https://github.com/user-attachments/assets/220e5f6f-9ca1-47a3-b7b6-7c1dafd96152" />
 
 
-Here we change the date using the CAST function, we are not going to do an analysis that requires the precise moment.
+<br><br>
+- Drop useless columns (e.g., "Permissions")
 
-
-<pre> 
- 
- ALTER TABLE olist_orders_dataset
-ALTER COLUMN order_purchase_timestamp DATE;
-
-ALTER TABLE olist_orders_dataset
-ALTER COLUMN order_approved_at DATE;
-
-ALTER TABLE olist_orders_dataset
-ALTER COLUMN order_delivered_carrier_date DATE;
-
-ALTER TABLE olist_orders_dataset
-ALTER COLUMN order_delivered_customer_date DATE;
-
-ALTER TABLE olist_orders_dataset
-ALTER COLUMN order_estimated_delivery_date DATE;
-
- 
- </pre>
+This is the code:
+<pre>
+ALTER TABLE [music-mental-health].dbo.mxmh_survey_results
+DROP COLUMN Permissions;
   
-Result: <img width="876" height="282" alt="image" src="https://github.com/user-attachments/assets/b50ac75c-bac1-4b3e-ae07-bde51b472fd8" />
+</pre>
+
+Let's double check if we truly dropped the column:
+<img width="275" height="654" alt="image" src="https://github.com/user-attachments/assets/c52e7acf-f7df-42f2-b2ed-5dfc731fbdd4" />
 
   
 
@@ -154,23 +115,30 @@ Result: <img width="876" height="282" alt="image" src="https://github.com/user-a
 
 ## 📈 Project Includes
 
-- **Overview:** A high-level summary of key performance indicators (KPIs), such as total revenue, average delivery time, top product categories.
+- **Overview:** This analysis focuses on extracting insights around listening time, platform usage, mood effects, and mental health self-assessments. It’s not just about who listens to what but also it’s about how that might relate to how they feel.
  <br>
 
-Total revenue:<br>
-<img width="414" height="219" alt="image" src="https://github.com/user-attachments/assets/aff6501c-522b-429c-8f2c-c6ecab959de2" />
-<br>
-
-Running total revenue per year :<br>
-<img width="887" height="375" alt="image" src="https://github.com/user-attachments/assets/1bef258e-597a-4f13-9b2c-daf6de62124d" />
-<br>
-
-Average delivery time:<br>
-<img width="388" height="515" alt="image" src="https://github.com/user-attachments/assets/07094633-1a92-40ca-ae27-6051e0ca2fcf" />
+Are certain genres more common among people reporting anxiety?:<br>
+<img width="502" height="618" alt="image" src="https://github.com/user-attachments/assets/a96d265a-53da-47b0-a61b-a29ff39d0b62" />
 
 <br>
-Top product categories (10 best performing by tot sales): <br>
-<img width="409" height="469" alt="image" src="https://github.com/user-attachments/assets/a191e435-439d-43e4-a65a-222b7047e5f3" />
+
+Are certain genres more common among people reporting depression?:<br>
+<img width="517" height="599" alt="image" src="https://github.com/user-attachments/assets/e939f73d-3d44-454b-9650-114a818f4769" />
+<br>
+
+Do people who listen more hours per day report different mental health patterns?:<br>
+<img width="732" height="817" alt="image" src="https://github.com/user-attachments/assets/1084425b-c3c6-4438-8645-4410ac0736ee" />
+<br>
+Not very clear, let's group using bin:
+<img width="972" height="820" alt="image" src="https://github.com/user-attachments/assets/22aa0ca3-ff7d-4768-94c7-f6626cfb7be5" />
+Much better. From this result it seems that music is actually worsening our mental health, but it's more plausible that people dealing with more stress or emotional difficulty use music as a coping tool, resulting in longer listening times rather than music causing distress.
+
+
+<br>
+Self report on usefulness of music: <br>
+<img width="668" height="439" alt="image" src="https://github.com/user-attachments/assets/c8429bd1-e6c9-4a1f-a17c-b3423c23ab29" />
+From a self reporting perspecting it seems that music is very helpful. 
 
 
 <br><br>
